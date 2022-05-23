@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Расчитайте ипотеку</h2>
+        </div>
+        <div class="left">
+            <div class="box">
+                <label for="">Стоимость недвижимости</label>
+                <input type="text" id="costApartament" value="100000">
+                <input type="range" id="costApartamentRange" value="200000" min="0" step="100000" max="5000000">
+            </div>  
+            <div class="box">
+                <label for="">Первоначальный взнос</label>
+                <input type="text" id="fee" value="50000">
+                <input type="range" id="feeRange" value="100000" step="100000" min="0" max="5000000">
+            </div>
+            <div class="box">
+                <label for="">Срок кредита</label>
+                <input type="text" id="kreditTerm" value="5">
+                <input type="range" id="kreditTermRange" value="5" min="1" step="1" max="50">
+            </div>
+        </div>
+        <div class="right">
+            <div class="box">
+                <p>Сумма кредита</p>
+                <div class="value">
+                    <span id="sumKredit">0</span><span>₽</span>
+                </div>
+            </div>
+            <div class="box">
+                <p>Ежемесячный платеж</p>
+                <div class="value">
+                    <span id="everyMonth">0</span><span>₽</span>
+                </div>
+            </div>
+            <div class="box">
+                
+                <p>Рекомендуемый доход</p>
+                <div class="value">
+                    <span id="recomendedPayDay">0</span><span>₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="header-choose">
+                <h2>Выберите банк</h2>
+            </div>
+            <div class="radios">
+                <div class="box">
+                    <input class="radio" type="radio" name="bank" id="alpha" data-value="8.7" checked>
+                    <label for="alpha">
+                        <span>Альфа-банк</span>
+                        <span>8,7%</span>
+                    </label>
+                </div>
+                <div class="box">
+                    <input class="radio" type="radio" name="bank" id="sberbank" data-value="8.4">
+                    <label for="sberbank">
+                        <span>Сбербанк</span>
+                        <span>8,4%</span>
+                    </label>
+                </div>
+                <div class="box">
+                    <input class="radio" type="radio" name="bank" id="pochta" data-value="7.9">
+                    <label for="pochta">
+                        <span>Почтабанк-банк</span>
+                        <span>7,9%</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
